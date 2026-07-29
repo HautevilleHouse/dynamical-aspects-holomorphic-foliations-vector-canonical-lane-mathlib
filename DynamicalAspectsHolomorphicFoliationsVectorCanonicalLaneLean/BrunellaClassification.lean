@@ -1,0 +1,23 @@
+import canonicalLaneMathlib.AdmissibleClass
+import DynamicalAspectsHolomorphicFoliationsVectorCanonicalLaneLean.HolomorphicFoliation
+import DynamicalAspectsHolomorphicFoliationsVectorCanonicalLaneLean.SingularityAnalysis
+import DynamicalAspectsHolomorphicFoliationsVectorCanonicalLaneLean.HolonomyGroup
+import DynamicalAspectsHolomorphicFoliationsVectorCanonicalLaneLean.InvariantMeasures
+
+namespace HautevilleHouse
+namespace DynamicalAspectsHolomorphicFoliationsVectorCanonicalLaneLean
+
+/-!
+# Brunella Classification Package
+
+Brunella's classification of holomorphic foliations on complex surfaces.
+-/
+
+structure BrunellaClassificationPackage (F : HolomorphicFoliationPackage) where
+  foliationType : Br.ClassificationType
+  rationalityCondition : RationalityCondition foliationType
+  rationalConjecture : RationalConjectureCondition foliationType
+  proofLayer : Br.ProofLayer foliationType
+
+end DynamicalAspectsHolomorphicFoliationsVectorCanonicalLaneLean
+end HautevilleHouse
